@@ -44,6 +44,6 @@ export default function ButtonAppBar() {
           <Button color="inherit">Login</Button>
         </Toolbar>
       </AppBar>
-    </div >
+    </div>
   );
 }

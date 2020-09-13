@@ -12,9 +12,9 @@ export default function Routes() {
 
       <Route path={'/'} component={App} />
 
-      <Route exact path={'/home'} component={CardContainer} />
+      <Route exact path={'/home'} component={SimpleTable} />
       <Switch>
-        <Route exact path={'/page1'} component={SimpleTable} />
+        <Route exact path={'/page1'} component={CardContainer} />
         <Route exact path={'/card'} component={OutlinedCard} />
       </Switch>
 

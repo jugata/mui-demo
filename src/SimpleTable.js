@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, styled } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -15,6 +15,25 @@ const useStyles = makeStyles({
   },
 });
 
+// Styled Component to style Button Component
+const MyTableHead = styled(TableHead)({
+  background: 'linear-gradient(45deg, #2196F3 30%, #FF8E53 90%)',
+  borderRadius: 3,
+  borderWidth: '30px',
+  borderColor: 'purple',
+  boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+  color: 'white',
+  height: 48,
+  padding: '0 30px',
+});
+/*
+const MyTableCell = styled(TableCell)({
+  color: 'red',
+  borderWidth: '3px',
+  borderColor: 'purple',
+
+});
+*/
 
 const rows = colorData
 
@@ -22,23 +41,19 @@ export default function SimpleTable() {
   const classes = useStyles();
 
   return (
-    <TableContainer component={Paper}>
+    <TableContainer>
       <Table className={classes.table} aria-label="simple table">
-        <TableHead>
+        <MyTableHead>
           <TableRow>
-            <TableCell>Dessert (100g serving)</TableCell>
             <TableCell align="right">ID</TableCell>
             <TableCell align="right">Color</TableCell>
             <TableCell align="right">Hex</TableCell>
             <TableCell align="right">Year&nbsp;(g)</TableCell>
           </TableRow>
-        </TableHead>
+        </MyTableHead>
         <TableBody>
           {rows.map((row) => (
             <TableRow key={row.name}>
-              <TableCell component="th" scope="row">
-                {row.name}
-              </TableCell>
               <TableCell align="right">{row.id}</TableCell>
               <TableCell align="right">{row.name}</TableCell>
               <TableCell align="right">{row.color}</TableCell>

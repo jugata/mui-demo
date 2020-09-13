@@ -3,11 +3,12 @@ const theme = createMuiTheme({
   palette: {
     primary: {
       light: '#F2AF29',
-      main: '#474747',
-      dark: '#AD343E'
+      main: '#251F47', //'#F2AF29', //'#251F47'
+      dark: '#AD343E',
+
     },
     secondary: {
-      main: '#f44336',
+      main: '#E0E0CE',
     },
   },
   typography: {
