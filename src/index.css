@@ -17,3 +17,19 @@ code {
   text-decoration: 'none';
   padding:5px
 }
+
+.stats {
+  background-color: lightslategray;
+  border-width: 3px;
+  border-color: black;
+  border-style: solid;
+  width: 100px;
+  border-radius: 5px;
+  align-self: center
+}
+
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center
+}

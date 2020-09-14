@@ -1,10 +1,17 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import "./PageOne.css"
+import Layout from './Layout'
+import CardContainer from './CardContainer'
+import Name from './Name'
 export default function PageOne() {
   return (
-    <div className="pageOne">
-      <h1>KKKKKKKKK</h1>
-      MEEEE
-    </div>
+
+    <Layout title={"ASSESSMent for You"}>
+      <Name />
+      <Fragment>
+        <CardContainer />
+      </Fragment>
+    </Layout>
+
   )
 }

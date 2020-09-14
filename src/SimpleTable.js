@@ -43,14 +43,14 @@ export default function SimpleTable() {
   return (
     <TableContainer>
       <Table className={classes.table} aria-label="simple table">
-        <MyTableHead>
+        <TableHead>
           <TableRow>
             <TableCell align="right">ID</TableCell>
             <TableCell align="right">Color</TableCell>
             <TableCell align="right">Hex</TableCell>
             <TableCell align="right">Year&nbsp;(g)</TableCell>
           </TableRow>
-        </MyTableHead>
+        </TableHead>
         <TableBody>
           {rows.map((row) => (
             <TableRow key={row.name}>

@@ -36,7 +36,15 @@ export default function ButtonAppBar() {
 
           <Link
             style={{ textDecoration: 'none', color: 'white' }}
-            className="link" to='/page1'>CARDS</Link>
+            className="link" to='/cards'>CARDS</Link>
+
+          <Link
+            style={{ textDecoration: 'none', color: 'white' }}
+            className="link" to='/page1'>Page 1</Link>
+
+          <Link
+            style={{ textDecoration: 'none', color: 'white' }}
+            className="link" to='/page2'>Page 2</Link>
 
           <Typography variant="h6" className={classes.title}>
             DEMO!

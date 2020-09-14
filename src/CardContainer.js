@@ -3,12 +3,12 @@ import Grid from '@material-ui/core/Grid';
 import colorData from './utils/colorData'
 import OutlinedCard from './OutlinedCard'
 
-export default function CardConatiner() {
+export default function CardContainer() {
 
   return (
-    <Grid container spacing={12}>
+    <Grid container spacing={10}>
 
-      {colorData.map(data => <Grid item xs={6}><OutlinedCard color={data} /></Grid>)}
+      {colorData.map(data => <Grid item xs={6} key={data.id}><OutlinedCard color={data} /></Grid>)}
 
     </Grid>
   )

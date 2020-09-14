@@ -1,12 +1,13 @@
 import React from 'react';
-import { makeStyles, styled } from '@material-ui/core/styles';
+import { makeStyles, styled, useTheme } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
-const useStyles = makeStyles({
+
+const useStyles = makeStyles(theme => ({
   root: {
     minWidth: 275,
   },
@@ -17,11 +18,10 @@ const useStyles = makeStyles({
   },
   title: {
     fontSize: 22,
-  },
-  pos: {
-    marginBottom: 12,
-  },
-});
+  }
+}));
+
+
 
 const MyButton = styled(Button)({
   background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
@@ -37,11 +37,14 @@ export default function OutlinedCard(props) {
   const classes = useStyles();
   const bull = <span className={classes.bullet}>•</span>;
   const { color } = props
+
+  const theme = useTheme()
+  console.log(theme)
   return (
 
     <Card className={classes.root} variant="outlined">
       <CardContent>
-        <Typography className={classes.title} color="textSecondary" gutterBottom>
+        <Typography className={classes.title} color="textSecondary" variant="h6" gutterBottom>
           COLORS
         </Typography>
 
@@ -53,8 +56,8 @@ export default function OutlinedCard(props) {
         </Typography>
       </CardContent>
       <CardActions>
-        <MyButton size="small">Using Styled</MyButton>
-        <Button size="small">Not Styled</Button>
+        <Button size="small" color="primary">Using Styled</Button>
+        <Button size="small" color="primary">Not Styled</Button>
       </CardActions>
     </Card>
   );

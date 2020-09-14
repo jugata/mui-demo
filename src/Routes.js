@@ -3,9 +3,11 @@ import App from './App'
 import React from 'react'
 import PageOne from "./PageOne"
 import OutlinedCard from './OutlinedCard'
-import Home from "./Home"
-import CardContainer from './CardConatiner'
+
+import CardContainer from './CardContainer'
 import SimpleTable from './SimpleTable'
+import Layout from './Layout'
+import PageTwo from './PageTwo'
 export default function Routes() {
   return (
     <Router>
@@ -14,8 +16,9 @@ export default function Routes() {
 
       <Route exact path={'/home'} component={SimpleTable} />
       <Switch>
-        <Route exact path={'/page1'} component={CardContainer} />
-        <Route exact path={'/card'} component={OutlinedCard} />
+        <Route exact path={'/cards'} component={CardContainer} />
+        <Route exact path={'/page1'} component={PageOne} />
+        <Route exact path={'/page2'} component={PageTwo} />
       </Switch>
 
 
