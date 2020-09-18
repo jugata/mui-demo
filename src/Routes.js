@@ -15,11 +15,13 @@ export default function Routes() {
       <Route path={'/'} component={App} />
 
       <Route exact path={'/home'} component={SimpleTable} />
-      <Switch>
-        <Route exact path={'/cards'} component={CardContainer} />
+
+      <Route exact path={'/cards'} component={CardContainer} />
+      <Layout>
         <Route exact path={'/page1'} component={PageOne} />
         <Route exact path={'/page2'} component={PageTwo} />
-      </Switch>
+      </Layout>
+
 
 
 

@@ -14,7 +14,7 @@ const company = {
 export default function Layout(props) {
   return (
     <div className="layout-container">
-      {props.title}
+
       <Stats stats={stats} />
 
       <h1>Layout</h1>

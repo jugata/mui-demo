@@ -5,11 +5,11 @@ import Layout from './Layout'
 export default function PageTwo() {
 
   return (
-    <Layout title={"The Schedule"}>
-      <Fragment>
-        <SimpleTable />
-      </Fragment>
-    </Layout>
+
+    <Fragment>
+      <SimpleTable />
+    </Fragment>
+
 
   )
 
